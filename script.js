@@ -40,4 +40,12 @@ document.addEventListener('DOMContentLoaded', function() {
         taskInput.value = '';
     }
 
-    //
+    // Attach event listeners
+    addButton.addEventListener('click', addTask);
+
+    taskInput.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            addTask();
+        }
+    });
+});
